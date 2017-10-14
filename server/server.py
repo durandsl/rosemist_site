@@ -2,7 +2,7 @@
 import os
 import cherrypy
 
-PATH = "/home/stephanie/rosemist_goldens/rosemist_site"
+PATH = "/var/www/rosemist_site/pages"
 LOCAL = os.path.abspath(os.path.dirname(__file__))
 class Root(object): pass
 
