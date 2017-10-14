@@ -6,7 +6,9 @@ PATH = "/var/www/rosemist_site/pages"
 LOCAL = os.path.abspath(os.path.dirname(__file__))
 class Root(object): pass
 
-cherrypy.config.update({'server.socket_port': 80})
+cherrypy.config.update({
+        'server.socket_host': '0.0.0.0',
+        'server.socket_port': 80})
 cherrypy.tree.mount(Root(), '/', config={
         '/': {
                 'tools.staticdir.on': True,
