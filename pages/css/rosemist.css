@@ -57,6 +57,10 @@ hr.divider {
     max-width: 250px;
 }
 
+.carousel {
+    background-color: black;
+}
+
 .carousel-inner>.carousel-item {
     height: 100vh;
 }
