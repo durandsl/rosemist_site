@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import os
 import cherrypy
+from sendemail import EmailHandler
 
 PATH = "/var/www/rosemist_site/pages"
 LOCAL = os.path.abspath(os.path.dirname(__file__))
@@ -17,8 +18,14 @@ cherrypy.tree.mount(Root(), '/', config={
                 'log.screen': False,
                 'log.access_file': LOCAL + '/access.log',
                 'log.error_file': LOCAL + '/error.log'
-            },
+            }
     })
+cherrypy.tree.mount(EmailHandler(), '/email' 
+        ,config={
+        '/' : {
+                'request.dispatch': cherrypy.dispatch.MethodDispatcher()
+        }
+})
 
 cherrypy.engine.start()
 cherrypy.engine.block()

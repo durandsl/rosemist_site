@@ -83,25 +83,25 @@
             <strong>Form</strong>
         </h2>
         <hr class="divider">
-        <form action="/email" method="POST">
+        <form id="contact-form" action="/email" method="POST">
             <div class="messages"></div>
             <div class="row">
                 <div class="form-group col-lg-4">
                     <label class="text-heading">Name</label>
-                    <input type="text" class="form-control" required>
+                    <input name="contactName" type="text" class="form-control" required>
                 </div>
                 <div class="form-group col-lg-4">
                     <label class="text-heading">Email Address</label>
-                    <input type="email" class="form-control" required>
+                    <input name="email" type="email" class="form-control" required>
                 </div>
                 <div class="form-group col-lg-4">
                     <label class="text-heading">Phone Number</label>
-                    <input type="tel" class="form-control">
+                    <input name="phoneNumber" type="tel" class="form-control">
                 </div>
                 <div class="clearfix"></div>
                 <div class="form-group col-lg-12">
                     <label class="text-heading">Message</label>
-                    <textarea class="form-control" rows="6" required></textarea>
+                    <textarea name="emailBody" class="form-control" rows="6" required></textarea>
                 </div>
                 <div class="form-group col-lg-12">
                     <button type="submit" class="btn btn-secondary">Submit</button>
